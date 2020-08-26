@@ -2,7 +2,7 @@ FILE_NAME=movie.mov
 WIDTH=320
 FRAME=10
 
-# 結果ファイル
+# 結果ファイルを削除（初期化）
 rm converted.gif
 
 # 実行
