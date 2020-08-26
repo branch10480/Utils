@@ -1,14 +1,10 @@
 FILE_NAME=movie.mov
+WIDTH=320
 FRAME=10
-QUALITY=60
-RESIZE=60%
 
-# 結果ファイル、途中生成ファイルの削除
-rm result.gif
-rm -rf work
+# 結果ファイル
+rm converted.gif
 
-mkdir work
-ffmpeg -i $FILE_NAME -an -r $FRAME work/%04d.png  # 10frames/secでpng作成
-convert work/*.png -quality $QUALITY -resize $RESIZE work/output_%04d.jpg  # 作成したpngを40%にリサイズ
-convert work/output_*.jpg result.gif  #  gifに変換
+# 実行
+ffmpeg -i $FILE_NAME -vf scale=${WIDTH}:-1 -r $FRAME converted.gif
 

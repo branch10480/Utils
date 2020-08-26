@@ -38,3 +38,9 @@ Temporary Items
 *.dll
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,powershell
+
+# Utils
+mkgif/*.mp4
+mkgif/*.mov
+mkgif/*.wav
+mkgif/converted.gif
